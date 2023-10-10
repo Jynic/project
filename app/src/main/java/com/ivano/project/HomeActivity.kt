@@ -13,7 +13,7 @@ class HomeActivity : AppCompatActivity() {
         val view =binding.root
         setContentView(view)
         binding.btngaris.setOnClickListener {
-            Toast.makeText(this, "BERHASIL", Toast.LENGTH_SHORT).show().toString()
+            Toast.makeText(this, "BERHASILL", Toast.LENGTH_SHORT).show().toString()
         }
     }
 }
