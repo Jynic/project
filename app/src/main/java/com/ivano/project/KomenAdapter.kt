@@ -14,11 +14,11 @@ class KomenAdapter():RecyclerView.Adapter<KomenAdapter.KomenViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return Global.komen.size
+        return Global.komens.size
     }
 
     override fun onBindViewHolder(holder: KomenViewHolder, position: Int) {
-        holder.binding.txtKomen.text =Global.komen[position].komen.toString()
-        holder.binding.txtPenulisKomen.text = Global.komen[position].penulis.toString()
+        holder.binding.txtKomen.text = Global.komens[position].komen.toString()
+        holder.binding.txtPenulisKomen.text = Global.komens[position].penulis.toString()
     }
 }

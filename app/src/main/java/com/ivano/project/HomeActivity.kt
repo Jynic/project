@@ -3,6 +3,7 @@ package com.ivano.project
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ivano.project.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -12,8 +13,10 @@ class HomeActivity : AppCompatActivity() {
         binding =ActivityHomeBinding.inflate(layoutInflater)
         val view =binding.root
         setContentView(view)
-        binding.btngaris.setOnClickListener {
-            Toast.makeText(this, "BERHASILL", Toast.LENGTH_SHORT).show().toString()
-        }
+
+        val lm: LinearLayoutManager = LinearLayoutManager(this)
+        binding.recyclerView.layoutManager = lm
+        binding.recyclerView.setHasFixedSize(true)
+        binding.recyclerView.adapter = KomenAdapter()
     }
 }
