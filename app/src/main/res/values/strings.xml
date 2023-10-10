@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">project</string>
+    <string name="btngaris"> </string>
+    <string name="txtJudul">Cerbung</string>
+    <string name="btnNotify"> </string>
+    <string name="btnAll">All</string>
+    <string name="btnAksi">Aksi</string>
+    <string name="btnHorror">Horror</string>
+    <string name="btnKocak">Kocak</string>
+    <string name="txtJudulCerita">Rahasia Terkunci di Perpustakaan Kuno</string>
+    <string name="txtbantupenulis"> by </string>
+    <string name="txtpenulisCerita">NebulaNomad</string>
+    <string name="txtDesc">mengisahkan tentang
+        seorang mahasiswa bernama alex yang secara
+        tidak sengaja menemukan sebuah buku kuno yang
+        misterius di perpustakaan universitasnya</string>
+    <string name="btnRead">Read</string>
+    <string name="btnHome">Home</string>
+    <string name="btnFollowing">Following</string>
+    <string name="btnCreate">Create</string>
+    <string name="btnUser">Users</string>
+    <string name="btnPrefs">Prefs</string>
+    <string name="txtKomen">Komen ...</string>
+    <string name="txtpenulisKomen">Ivano Zefanya</string>
+    <string name="btnSuka">Like</string>
+</resources>
