@@ -2,9 +2,14 @@ package com.ivano.project
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.isGone
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.ivano.project.databinding.ActivityKomenBinding
+import kotlinx.coroutines.processNextEventInCurrentThread
 import kotlin.math.sign
+import android.view.View
 
 class KomenAdapter(private var indexx:Int):RecyclerView.Adapter<KomenAdapter.KomenViewHolder>() {
     class KomenViewHolder(val binding: ActivityKomenBinding):RecyclerView.ViewHolder(binding.root)
@@ -15,14 +20,18 @@ class KomenAdapter(private var indexx:Int):RecyclerView.Adapter<KomenAdapter.Kom
     }
 
     override fun getItemCount(): Int {
-        return Global.komens.count{indexx == it.indexcerita}
+        return Global.komens.size
     }
 
     override fun onBindViewHolder(holder: KomenViewHolder, position: Int) {
 
-        for (ind in indexx..indexx+itemCount-1){
-            holder.binding.txtKomen.text = Global.komens[ind].komen.toString()
-            holder.binding.txtPenulisKomen.text = Global.komens[ind].penulis.toString()
+        if(indexx == Global.komens[position].indexcerita){
+            holder.binding.txtKomen.text = Global.komens[position].komen.toString()
+            holder.binding.txtPenulisKomen.text = Global.komens[position].penulis.toString()
+            holder.itemView.visibility = View.VISIBLE
+        }
+        else{
+            holder.itemView.isActivated = false
         }
 
     }

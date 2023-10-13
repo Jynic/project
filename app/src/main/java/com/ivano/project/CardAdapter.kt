@@ -34,6 +34,7 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
 
         }
         holder.binding.btnRead.setOnClickListener {
+
             val intent = Intent(it.context, ReadActivity::class.java)
             intent.putExtra("index", Global.cards[position].index.toInt())
             intent.putExtra("judul", Global.cards[position].judul.toString())
