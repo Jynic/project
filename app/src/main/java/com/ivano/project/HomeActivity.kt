@@ -16,10 +16,10 @@ class HomeActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.recyclerView.isVisible = false
-        val lm: LinearLayoutManager = LinearLayoutManager(this)
-        binding.recyclerView.layoutManager = lm
-        binding.recyclerView.setHasFixedSize(true)
-        binding.recyclerView.adapter = KomenAdapter()
+//        val lm: LinearLayoutManager = LinearLayoutManager(this)
+//        binding.recyclerView.layoutManager = lm
+//        binding.recyclerView.setHasFixedSize(true)
+//        binding.recyclerView.adapter = KomenAdapter()
 
         val lm2: LinearLayoutManager = LinearLayoutManager(this)
         binding.recyclerViewCard.layoutManager = lm2

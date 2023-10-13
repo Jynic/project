@@ -4,8 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ivano.project.databinding.ActivityKomenBinding
+import kotlin.math.sign
 
-class KomenAdapter():RecyclerView.Adapter<KomenAdapter.KomenViewHolder>() {
+class KomenAdapter(private var indexx:Int):RecyclerView.Adapter<KomenAdapter.KomenViewHolder>() {
     class KomenViewHolder(val binding: ActivityKomenBinding):RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KomenViewHolder {
@@ -14,11 +15,15 @@ class KomenAdapter():RecyclerView.Adapter<KomenAdapter.KomenViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return Global.komens.size
+        return Global.komens.count{indexx == it.indexcerita}
     }
 
     override fun onBindViewHolder(holder: KomenViewHolder, position: Int) {
-        holder.binding.txtKomen.text = Global.komens[position].komen.toString()
-        holder.binding.txtPenulisKomen.text = Global.komens[position].penulis.toString()
+
+        for (ind in indexx..indexx+itemCount-1){
+            holder.binding.txtKomen.text = Global.komens[ind].komen.toString()
+            holder.binding.txtPenulisKomen.text = Global.komens[ind].penulis.toString()
+        }
+
     }
 }

@@ -22,23 +22,26 @@ class CardAdapter() : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
 
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
         val url =Global.cards[position].foto
+        holder.binding.txtJudulCerita.text = Global.cards[position].judul.toString()
+        holder.binding.txtPenulis.text = Global.cards[position].penulis.toString()
+        holder.binding.txtDesc.text = Global.cards[position].desc.toString()
         with(holder.binding){
             val builder = Picasso.Builder(holder.itemView.context)
             builder.listener{picasso, uri, exception-> exception.printStackTrace()}
             Picasso.get().load(url).into(img)
-            txtJudulCerita.text = Global.cards[position].judul.toString()
-            txtPenulis.text = Global.cards[position].penulis.toString()
-            txtDesc.text = Global.cards[position].desc
+
 
 
         }
         holder.binding.btnRead.setOnClickListener {
             val intent = Intent(it.context, ReadActivity::class.java)
+            intent.putExtra("index", Global.cards[position].index.toInt())
             intent.putExtra("judul", Global.cards[position].judul.toString())
             intent.putExtra("penulis", Global.cards[position].penulis.toString())
             intent.putExtra("desc", Global.cards[position].desc.toString())
             intent.putExtra("foto", Global.cards[position].foto.toString())
             it.context.startActivity(intent)
+
         }
     }
 }
