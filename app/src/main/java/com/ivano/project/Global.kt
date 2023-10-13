@@ -15,4 +15,10 @@ object Global {
         Card(3,"Valorant", "SikiLala", "Mengisahkan sebuah permainan online yang dimainkan oleh banyak orang. Banyak orang sangat gemar bermain Valorant. Bahkan ada yang memiliki karir sebagai pro player Valorant.", "https://live.staticflickr.com/737/32640476365_906f64ce29_b.jpg")
 
     )
+
+    val accounts = arrayListOf(
+        Account("ivano","admin"),
+        Account("michael","admin"),
+        Account("vinsent","admin")
+    )
 }
