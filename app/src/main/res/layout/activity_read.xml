@@ -14,12 +14,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewKomenRead"
         android:layout_width="350dp"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginTop="530dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView3"
-        tools:listitem="@layout/activity_komen" />
+        app:layout_constraintTop_toTopOf="@+id/cardView3" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
