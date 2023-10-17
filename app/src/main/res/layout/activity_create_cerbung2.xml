@@ -150,7 +150,7 @@
         android:text="2 0f 3"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstPara" />
 
     <Button
         android:id="@+id/btnNextCreateCerbung2"
@@ -161,7 +161,7 @@
         android:fontFamily="@font/karla"
         android:text="Next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstPara" />
 
     <TextView
         android:id="@+id/textView19"
@@ -174,7 +174,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView7" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/groupAccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -198,7 +198,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/txtFirstPara"
         android:layout_width="375dp"
         android:layout_height="140dp"
         android:layout_marginStart="20dp"
@@ -216,7 +216,7 @@
         android:layout_marginTop="20dp"
         android:text="Write First Paragraph"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/groupAccess" />
 
     <Button
         android:id="@+id/btnPrevCreateCerbung2"
@@ -227,6 +227,6 @@
         android:fontFamily="@font/karla"
         android:text="Prev"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstPara" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
