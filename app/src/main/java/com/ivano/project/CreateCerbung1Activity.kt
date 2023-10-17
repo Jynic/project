@@ -20,14 +20,17 @@ class CreateCerbung1Activity : AppCompatActivity() {
         adapter.setDropDownViewResource(R.layout.myspinner_item_layout)
         binding.spinGenre.adapter = adapter
 
+
         binding.btnNextCreateCerbung1.setOnClickListener{
             var title = binding.txtTitle.text.toString();
             var desc = binding.txtDescription.text.toString();
             var url = binding.txtUrl.text.toString();
+            var genre = binding.spinGenre.selectedItem.toString()
             val intent = Intent(it.context,Global::class.java).apply {
                 putExtra("title", title)
                 putExtra("desc", desc)
                 putExtra("url", url)
+                putExtra("genre", genre)
             }
             it.context.startActivity(intent)
         }
