@@ -188,7 +188,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
+        android:layout_marginBottom="26dp"
         android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxPolicy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
@@ -207,7 +209,7 @@
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="68dp"
         android:maxLines="4"
         android:text="I agree with the rules and policies in creating\nCerbung. This includes not containing racial slurs,\ndiscrimination, religion, advertisements, and\npolitics"
         app:layout_constraintStart_toStartOf="parent"

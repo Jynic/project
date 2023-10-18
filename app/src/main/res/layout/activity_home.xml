@@ -87,6 +87,18 @@
                 android:layout_height="match_parent">
 
                 <Button
+                    android:id="@+id/btnCreate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Create"
+                    app:iconGravity="top"
+                    app:icon="@drawable/baseline_note_add_24"
+                    app:layout_constraintStart_toEndOf="@+id/btnHome"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
                     android:id="@+id/btnHome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -16,7 +16,6 @@ class CreateCerbung2Activity : AppCompatActivity() {
         setContentView(binding.root)
 
         var access = ""
-        var paragraf = binding.txtFirstPara.text.toString()
         val title = intent.getStringExtra("title")
         val desc = intent.getStringExtra("desc")
         val url = intent.getStringExtra("url")
@@ -37,14 +36,19 @@ class CreateCerbung2Activity : AppCompatActivity() {
             }
         }
         binding.btnNextCreateCerbung2.setOnClickListener{
+            var para = binding.txtFirstPara.text.toString()
             val intent = Intent(it.context,CreateCerbung3Activity::class.java).apply {
                 putExtra("title", title)
                 putExtra("desc", desc)
                 putExtra("url", url)
                 putExtra("genre", genre)
                 putExtra("access", access)
-                putExtra("paragraf", paragraf)
+                putExtra("para", para)
             }
+            it.context.startActivity(intent)
+        }
+        binding.btnPrevCreateCerbung2.setOnClickListener {
+            val intent = Intent(it.context,CreateCerbung1Activity::class.java)
             it.context.startActivity(intent)
         }
     }

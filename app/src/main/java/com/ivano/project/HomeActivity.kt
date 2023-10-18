@@ -1,5 +1,6 @@
 package com.ivano.project
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -25,5 +26,10 @@ class HomeActivity : AppCompatActivity() {
         binding.recyclerViewCard.layoutManager = lm2
         binding.recyclerViewCard.setHasFixedSize(true)
         binding.recyclerViewCard.adapter = CardAdapter()
+
+        binding.btnCreate.setOnClickListener {
+            val intent = Intent(it.context,CreateCerbung1Activity::class.java)
+            it.context.startActivity(intent)
+        }
     }
 }
