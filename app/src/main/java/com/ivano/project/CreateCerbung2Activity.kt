@@ -17,6 +17,11 @@ class CreateCerbung2Activity : AppCompatActivity() {
 
         var access = ""
         var paragraf = binding.txtFirstPara.text.toString()
+        val title = intent.getStringExtra("title")
+        val desc = intent.getStringExtra("desc")
+        val url = intent.getStringExtra("url")
+        val genre = intent.getStringExtra("genre")
+
 
         binding.groupAccess.setOnCheckedChangeListener { radioGroup, id ->
             var selectedRadio = findViewById<RadioButton>(id)
@@ -32,7 +37,11 @@ class CreateCerbung2Activity : AppCompatActivity() {
             }
         }
         binding.btnNextCreateCerbung2.setOnClickListener{
-            val intent = Intent(it.context,Global::class.java).apply {
+            val intent = Intent(it.context,CreateCerbung3Activity::class.java).apply {
+                putExtra("title", title)
+                putExtra("desc", desc)
+                putExtra("url", url)
+                putExtra("genre", genre)
                 putExtra("access", access)
                 putExtra("paragraf", paragraf)
             }

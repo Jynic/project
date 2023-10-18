@@ -1,5 +1,6 @@
 package com.ivano.project
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ivano.project.databinding.ActivityCreateCerbung2Binding
@@ -20,9 +21,12 @@ class CreateCerbung3Activity : AppCompatActivity() {
         val access = intent.getStringExtra("access")
         val genre = intent.getStringExtra("genre")
 
+        var addMovie = Card(3,title.toString(), penulis.toString(), desc.toString(), url.toString(), para.toString(), access.toString(),genre.toString())
+
         binding.btnPublish.setOnClickListener {
-            var addMovie = Card(3,title.toString(), penulis.toString(), desc.toString(), url.toString(), para.toString(), access.toString(),genre.toString())
+            val intent = Intent(it.context,HomeActivity::class.java)
             Global.cards.add(addMovie)
+            it.context.startActivity(intent)
         }
     }
 }

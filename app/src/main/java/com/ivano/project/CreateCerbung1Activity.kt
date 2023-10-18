@@ -26,7 +26,7 @@ class CreateCerbung1Activity : AppCompatActivity() {
             var desc = binding.txtDescription.text.toString();
             var url = binding.txtUrl.text.toString();
             var genre = binding.spinGenre.selectedItem.toString()
-            val intent = Intent(it.context,Global::class.java).apply {
+            val intent = Intent(it.context,CreateCerbung2Activity::class.java).apply {
                 putExtra("title", title)
                 putExtra("desc", desc)
                 putExtra("url", url)
