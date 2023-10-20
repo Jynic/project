@@ -27,6 +27,10 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
             }
         }
+        binding.btnSignUpLogin.setOnClickListener {
+            val intent = Intent(it.context,SignUpActivity::class.java)
+            it.context.startActivity(intent)
+        }
     }
 
     private fun validateLogin(username: String, password: String): Boolean {
