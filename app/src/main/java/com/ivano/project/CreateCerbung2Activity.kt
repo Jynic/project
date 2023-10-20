@@ -51,5 +51,9 @@ class CreateCerbung2Activity : AppCompatActivity() {
             val intent = Intent(it.context,CreateCerbung1Activity::class.java)
             it.context.startActivity(intent)
         }
+        binding.btnHomeCreateCerbung2.setOnClickListener {
+            val intent = Intent(it.context,HomeActivity::class.java)
+            it.context.startActivity(intent)
+        }
     }
 }

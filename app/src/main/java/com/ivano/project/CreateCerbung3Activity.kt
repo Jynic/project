@@ -42,5 +42,9 @@ class CreateCerbung3Activity : AppCompatActivity() {
                 Toast.makeText(this, "You haven't agreed to the policy yet", Toast.LENGTH_SHORT).show()
             }
         }
+        binding.btnHomeCreateCerbung3.setOnClickListener {
+            val intent = Intent(it.context,HomeActivity::class.java)
+            it.context.startActivity(intent)
+        }
     }
 }
